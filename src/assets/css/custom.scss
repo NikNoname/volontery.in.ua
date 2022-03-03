@@ -1,0 +1,27 @@
+a {
+  color: #4c4c4c;
+
+.logo-text {
+  font-family: 'Russo One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+&:hover {
+   text-decoration: none;
+ }
+}
+
+.highlighted {
+  color: #4c4c4c;
+  font-family: 'Russo One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.a-city {
+  font-size: 1.5rem;
+  text-decoration: underline;
+}

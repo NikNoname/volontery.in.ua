@@ -1,0 +1,179 @@
+<div class="nav-container">
+  <div class="bar bar--sm visible-xs">
+    <div class="container">
+      <div class="row">
+        <div class="col-3 col-md-2">
+          <a routerLink="/">
+            <span class="logo-text">Волонтери України💙💛</span>
+          </a>
+        </div>
+
+        <div class="col-9 col-md-10 text-right">
+          <a href="#" class="hamburger-toggle" data-toggle-class="#menu1;hidden-xs">
+            <i class="icon icon--sm stack-interface stack-menu"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav id="menu1" class="bar bar--sm bar-1 hidden-xs ">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-2 hidden-xs">
+          <div class="bar__module">
+            <a routerLink="/">
+              <span class="logo-text">Волонтери України💙💛</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-8 col-md-12 text-right text-left-xs text-left-sm">
+          <div class="bar__module">
+            <span class="btn btn--sm btn--primary type--uppercase" (click)="showModal = !showModal">
+              <span class="btn__text">Доєднатися</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<div class="main-container">
+  <section class="imagebg image--light cover cover-blocks bg--secondary">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-lg-12">
+          <div>
+            <h1>Навіщо цей сайт?</h1>
+
+            <p class="lead">
+              Сайт <a routerLink="/" class="highlighted">volontery.in.ua</a> створено з метою
+              консолідації волонтерів та волонтерських організацій, які діють зараз на території України та готові
+              допомогати усім можливим нашим військовим та громадянам нашої країни. Тут ви можете знайти інформацію
+              по містам та категоріям.
+            </p>
+
+            <hr class="short">
+
+            <p class="lead">
+              Бажаєш доєднатися або просто є можливість допомогти? - Тисни "Доєднатися" та читай інструкцію!
+              <br/>
+              Необхідна допомога? - Гортай нижче та шукай своє місто!
+            </p>
+
+            <hr class="short">
+
+            <p class="lead">
+              <span class="highlighted">❗️❗️❗️Увага❗️❗️❗</span> Якщо ви не знайшли свого міста або не знайшли необхідної
+              категорії, або інформація яка вказана вважається підозрілою та не актуальною - прошу негайно контактувати
+              зі <a href="https://t.me/H31GR" target="_blank">мною</a>! Інформація буде оновлюватися 24/7.️
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <span class="highlighted">Міста:</span>
+
+          <a *ngFor="let key of cityKeys" [routerLink]="'/c/' + key" class="a-city px-2">{{ cities[key] }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="boxed bg--secondary boxed--sm boxed--border text-center">
+            <a routerLink="/ct/food">🍔 Провізія</a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="boxed bg--secondary boxed--sm boxed--border  text-center">
+            <a routerLink="/ct/clothes">🧦 Одяг</a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="boxed bg--secondary boxed--sm boxed--border text-center">
+            <a routerLink="/ct/medicines">💊 Медикаменти</a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="boxed bg--secondary boxed--sm boxed--border text-center">
+            <a routerLink="/ct/house">🏠 Житло</a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="boxed bg--secondary boxed--sm boxed--border text-center">
+            <a routerLink="/ct/transport">🚙 Транспорт</a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="boxed bg--secondary boxed--sm boxed--border text-center">
+            <a routerLink="/ct/evacuation">🚐 Евакуація</a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="boxed bg--secondary boxed--sm boxed--border text-center">
+            <a routerLink="/ct/financial">💳 Фінансова допомога</a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="boxed bg--secondary boxed--sm boxed--border text-center">
+            <a routerLink="/ct/relocate">🇵🇱 Переїзд за кордон</a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="boxed bg--secondary boxed--sm boxed--border text-center">
+            <a routerLink="/ct/other">⚙️ Інше</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="imagebg image--light cover cover-blocks bg--secondary">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-lg-12">
+          <div>
+            <p class="lead">
+              Сайт наразі працює в <span class="highlighted">beta-режимі</span> і я постійно працюю над покращенням
+              та оптимізацією. Якщо в тебе є пропозиції щодо покращення функціоналу або знайшов помилку - пиши
+              <a href="https://t.me/H31GR" target="_blank">мені</a>.
+              <br/>
+              Більше корисної інформації можна знайти на сайті
+              <a href="https://viyna.net/" target="_blank" class="highlighted">viyna.net</a>
+            </p>
+
+            <hr class="short">
+
+            <p class="lead highlighted">Слава Україні!💙💛</p>
+
+            <hr class="short">
+
+            <p class="lead highlighted">Русский военный корабль - курс тебе известен!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<app-modal *ngIf="showModal" [isActive]="showModal" [content]="joinContent"></app-modal>

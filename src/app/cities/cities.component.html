@@ -1,0 +1,57 @@
+<div class="nav-container">
+  <div class="bar bar--sm visible-xs">
+    <div class="container">
+      <div class="row">
+        <div class="col-3 col-md-2">
+          <a routerLink="/">
+            <span class="logo-text">Волонтери України💙💛</span>
+          </a>
+        </div>
+
+        <div class="col-9 col-md-10 text-right">
+          <a href="#" class="hamburger-toggle" data-toggle-class="#menu1;hidden-xs">
+            <i class="icon icon--sm stack-interface stack-menu"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav id="menu1" class="bar bar--sm bar-1 hidden-xs ">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-2 hidden-xs">
+          <div class="bar__module">
+            <a routerLink="/">
+              <span class="logo-text">Волонтери України💙💛</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-8 col-md-12 text-right text-left-xs text-left-sm">
+          <div class="bar__module">
+            <a class="btn btn--sm btn--primary type--uppercase" href="#">
+              <span class="btn__text">Доєднатися</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<div class="main-container">
+  <section class="text-center space--md">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="typed-headline">
+            <span class="h2 inline-block">Волонтери та волонтерські організації в місті {{ city }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <app-item *ngFor="let item of items" [item]="item" [fromCity]="true"></app-item>
+</div>

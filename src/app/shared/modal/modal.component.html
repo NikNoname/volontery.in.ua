@@ -1,0 +1,23 @@
+<div class="modal-instance">
+  <div class="modal-container" [ngClass]="{ 'modal-active': isActive }">
+    <div class="modal-content">
+      <div class="boxed boxed--lg">
+        <app-captcha
+          *ngIf="captchaResult === undefined"
+          (valid)="captchaResult = true"
+          (invalid)="captchaResult = false">
+        </app-captcha>
+
+        <p class="lead" *ngIf="captchaResult" [innerHTML]="content"></p>
+
+        <div class="alert bg--error" *ngIf="captchaResult === false">
+          <div class="alert__body">
+            <span>Русский военный корабль - иди своей дорогой!</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-close modal-close-cross" (click)="isActive = !isActive"></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<section>
+  <div class="row">
+    <div class="col-12">
+      <p>
+        Перед тим, як перейти далі, я пропоную тобі пройти маленьку капчу, яку без проблем пройде справжній українець.
+        <br/>
+        Перед тобою зараз слово, але букву в ньому змішані - яке це слово?
+      </p>
+
+      <p class="highlighted text-center">{{ captcha }}</p>
+
+      <form class="row">
+        <div class="col-md-8">
+          <input type="text" [(ngModel)]="input" [ngModelOptions]="{ standalone: true }" placeholder="Введіть слово" />
+        </div>
+
+        <div class="col-md-4">
+          <button type="submit" class="btn btn--primary type--uppercase" (click)="check()">Перевірити</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

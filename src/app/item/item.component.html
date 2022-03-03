@@ -1,0 +1,26 @@
+<section class="space--xs blog-article-wide">
+  <div class="container">
+    <div class="row cta cta--horizontal text-center-xs">
+      <div class="col-md-4">
+        <h4>{{ item.name }}</h4>
+      </div>
+      <div class="col-md-5">
+        <p class="lead" [innerHTML]="item.description"></p>
+
+        <p *ngIf="fromCity"><b>Категорії:</b> {{ categories }}</p>
+
+        <p *ngIf="!fromCity"><b>Місто:</b> {{ city }}</p>
+      </div>
+
+      <div class="col-md-3 text-right text-center-xs">
+        <span class="btn type--uppercase" (click)="showModal = !showModal">
+          <span class="btn__text">
+              Контакти
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-modal *ngIf="showModal" [isActive]="showModal" [content]="item.contacts"></app-modal>
